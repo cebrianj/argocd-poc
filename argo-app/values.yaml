@@ -8,3 +8,7 @@ image:
 service:
   type: ClusterIP
   port: 80
+
+sealedSecrets:
+  mongodb:
+    mongodb-password: <encrypted-password>
