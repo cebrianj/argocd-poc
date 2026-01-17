@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: basic-container
-        image: nginx:1.21.6 # Specific version for easier updates
+        image: nginx:1.29.4 
         ports:
         - containerPort: 80
 ---
