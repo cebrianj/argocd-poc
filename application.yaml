@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: basic-application
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/cebrianj/argocd-poc.git'
+    targetRevision: HEAD
+    path: argo-app
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argo-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
